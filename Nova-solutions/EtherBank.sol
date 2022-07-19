@@ -34,7 +34,7 @@ contract EtherBank {
         require(accounts[msg.sender].balance == 0, "EtherBank: account not empty yet, withdraw first");
         accounts[msg.sender].exists = false;
     }
-    function viewAccountBalance(address account) external view accountExists returns(uint256 balance) {
+    function viewAccountBalance(address account) external view returns(uint256 balance) {
         return(accounts[account].balance);
     }
 }
